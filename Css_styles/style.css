@@ -7,6 +7,16 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+/*----------
+ animation
+ ----------------- */
+ @keyframes zoom {
+   0%   {background-color:red; left:0px; top:0px;}
+   25%  {background-color:yellow; left:200px; top:0px;}
+   50%  {background-color:rgba(0, 0, 255, 0.692); left:200px; top:200px;}
+   75%  {background-color:green; left:0px; top:200px;}
+   100% {background-color:red; left:0px; top:0px;}
+ }
 /*-----------
  common class
  --------------- */
@@ -22,6 +32,15 @@ body{
     text-align: center;
     text-decoration: none;
  }
+.transfer_head{
+   border: 1px solid #161616;
+   width: 70px;
+}
+.transfer_head{
+   border:1px solid #161616;
+   width: 70px;
+}
+
 /*----------
  banner_section
  ----------------- */
@@ -31,6 +50,8 @@ body{
  .banner_background{
     background-color: #161616;
     border-radius: 30px;
+    animation-name: zoom;
+    animation-duration: 5s;
  }
  .banner_section{
     display: grid;
@@ -55,7 +76,7 @@ body{
     width: 100%;
     height: auto;
     margin: auto;
- }
+   }
  .banner_btn{
     background-color: orangered;
     color: #FFFFFF;
@@ -207,7 +228,7 @@ body{
       justify-content: center;
       align-items: center;
       gap: 80px;
-  }
+   }
   .aside{
    display: flex;
    flex-direction: column;
@@ -217,19 +238,60 @@ body{
    height: 100%;
    padding: 30px 30px;
    margin: left;
-}
-.another_btn{
+  }
+  .another_btn{
    border: 2px solid gray;
-}
-.transfer_blog{
+ }
+  .transfer_blog{
    display: grid;
    grid-template-columns: 1fr;
    gap: 20px;
-}
-.footer_item{
+ }
+  .footer_item{
    display: flex;
    flex-direction: column;
    gap: 8px;
    align-items: center;
+ }
 }
-}
+/*--------------
+ Tablet devise
+ -------------------- */
+ @media only screen and (min-width: 768px) and (max-width: 992px)  {
+   .blog_news{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 80px;
+   }
+   .aside{
+      display: flex;
+      flex-direction: row;
+      background-color: #fff;
+      border-radius: 8px;
+      width: 70%;
+      height: 100%;
+      padding: 30px 30px;
+      margin: left;
+      gap: 10px;
+     }
+     .btn_color{
+    color: #161616;
+    background-color: red;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+   }
+     .another_btn{
+      border: 2px solid gray;
+    }
+    .transfer_blog{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 20px;
+    }
+
+ }

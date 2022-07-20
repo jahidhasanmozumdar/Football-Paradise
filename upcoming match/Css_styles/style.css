@@ -7,6 +7,13 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+@keyframes zoom {
+   0%   {background-color:greenyellow; left:0px; top:0px;}
+   25%  {background-color:darkturquoise; left:200px; top:0px;}
+   50%  {background-color:lightcoral; left:200px; top:200px;}
+   75%  {background-color:mediumvioletred; left:0px; top:200px;}
+   100% {background-color:rebeccapurple; left:0px; top:0px;}
+ }
 /*-----------
  common class
  --------------- */
@@ -31,6 +38,8 @@ body{
  .banner_background{
     background-color: #161616;
     border-radius: 30px;
+    animation-name: zoom;
+    animation-duration: 5s;
  }
  .banner_section{
     display: grid;
@@ -103,26 +112,29 @@ body{
     gap: 20px;
 }
 .transfer_news{
+   height: 10vw;
+   width: 40vh;
     margin-bottom: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 8px;
 }
+.flag_container{
+   display: flex;
+}
 .transfer_info{
     display: flex;
     flex-direction: column;
-    text-align: start;
+    justify-content: center;
+    text-align: center;
     margin-left: 10px;
 }
 .card-img{
+    display: flex;
+    justify-content: center;
     width: 100%;
     margin: auto;
 }
-.watch_msg{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-}
+
 /*-----------------
  footer  section 
  --------------------------*/
@@ -158,4 +170,106 @@ body{
     background-color: #161616;
     font-size: 20px;
     border: none;
+ }
+ /*--------------
+ responsive design
+ -------------------- */
+/*--------------
+ mobile devise
+ -------------------- */
+ @media only screen and (max-width:576px)  {
+   .banner_section{
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: center;
+      align-items: center;
+      border-radius: 30px;
+      gap: 30px;
+      padding: 0 40px;
+   }
+   .banner_info>h1{
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 3rem;
+   }
+   .banner_info>p{
+      color: #FFFFFF;
+      font-weight: 400;
+      font-size: 16px;
+   }
+   .banner_info{
+      text-align: center;
+   }
+   .blog_news{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 80px;
+   }
+  .aside{
+   display: flex;
+   flex-direction: column;
+   background-color: #fff;
+   border-radius: 8px;
+   width: 60%;
+   height: 100%;
+   padding: 30px 30px;
+   margin: left;
+  }
+  .another_btn{
+   border: 2px solid gray;
+ }
+  .transfer_blog{
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 20px;
+ }
+  .footer_item{
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+   align-items: center;
+ }
+}
+/*--------------
+ Tablet devise
+ -------------------- */
+ @media only screen and (min-width: 768px) and (max-width: 992px)  {
+   .blog_news{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 80px;
+   }
+   .aside{
+      display: flex;
+      flex-direction: row;
+      background-color: #fff;
+      border-radius: 8px;
+      width: 70%;
+      height: 100%;
+      padding: 30px 30px;
+      margin: left;
+      gap: 10px;
+     }
+     .btn_color{
+    color: #161616;
+    background-color: red;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+   }
+     .another_btn{
+      border: 2px solid gray;
+    }
+    .transfer_blog{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 20px;
+    }
+
  }
