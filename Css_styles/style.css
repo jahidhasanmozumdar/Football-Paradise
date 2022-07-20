@@ -145,6 +145,17 @@ body{
     align-items: center;
     text-align: center;
 }
+.transfer_btn{
+   background-color: orangered;
+   color: #FFFFFF;
+   padding: 16px 25px;
+   font-size: 20px;
+   border: none;
+   border-radius: 5px;
+   margin-top: 30px;
+   visibility: hidden;
+  margin-left: 100px;
+}
 /*-----------------
  footer  section 
  --------------------------*/
@@ -247,6 +258,9 @@ body{
    grid-template-columns: 1fr;
    gap: 20px;
  }
+ .transfer_btn{
+   visibility: hidden;
+ }
   .footer_item{
    display: flex;
    flex-direction: column;
@@ -292,6 +306,9 @@ body{
       display: grid;
       grid-template-columns: repeat(2,1fr);
       gap: 20px;
+    }
+    .transfer_btn{
+      visibility: visible;
     }
 
  }
